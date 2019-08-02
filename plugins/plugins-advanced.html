@@ -1,0 +1,541 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Plugins - Advanced · difys docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Plugins - Advanced tutorial"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Plugins - Advanced · difys docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://difysjs.github.io/"/><meta property="og:description" content="# Plugins - Advanced tutorial"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"/><script type="text/javascript" src="/scripts/sidebarScroll.js"></script><script type="text/javascript" src="/scripts/codeblock.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/difys.svg" alt="difys docs"/><h2 class="headerTitleWithLogo">difys docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/introduction/quick-start" target="_self">Quick Start</a></li><li class="siteNavGroupActive"><a href="/plugins/plugins-api" target="_self">API</a></li><li class=""><a href="https://www.github.com/difysjs/difys" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Plugins</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/introduction/quick-start">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/introduction/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/introduction/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/introduction/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/introduction/partners">Our Partners</a></li><li class="navListItem"><a class="navItem" href="/introduction/core">The Core</a></li><li class="navListItem"><a class="navItem" href="/introduction/scripts">Scripts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Plugins<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/plugins/plugins-advanced">Plugins - Advanced</a></li><li class="navListItem"><a class="navItem" href="/plugins/redux-plugins">Redux &amp; Plugins</a></li><li class="navListItem"><a class="navItem" href="/plugins/plugins-api">Plugin API</a></li><li class="navListItem"><a class="navItem" href="/plugins/tips">Tips and tricks</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Scripting<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/scripting/scripting-api">Scripting API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Usage<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/usage/guide">Usage guide</a></li><li class="navListItem"><a class="navItem" href="/usage/examples">Examples and tutorials</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">FAQ<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/faq">Frequently asked questions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Other<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Protocol</h4><ul><li class="navListItem"><a class="navItem" href="/other/protocol/messages">Socket messages</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Identifiers</h4><ul><li class="navListItem"><a class="navItem" href="/other/identifiers/items">Items identifiers table</a></li><li class="navListItem"><a class="navItem" href="/other/identifiers/resources">Resources identifiers table</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="plugins-advanced-tutorial"></a><a href="#plugins-advanced-tutorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plugins - Advanced tutorial</h1>
+<p>We talked about plugins earlier in a merely basic way, the difys plugin API is evolving really fast and while we add more and more functionalities to it, let's explore plugins in an advanced way.</p>
+<p>In this tutorial you will learn the following stuff:</p>
+<ul>
+<li>Advanced plugin API</li>
+<li>Making your own utility functions
+<ul>
+<li>Making a logger</li>
+<li>Making a simple calculator from an api</li>
+</ul></li>
+<li>Interacting with the game
+<ul>
+<li>Receive messages</li>
+<li>Process them</li>
+<li>Send messages</li>
+</ul></li>
+<li>Interacting with the redux store
+<ul>
+<li>Making your own actions</li>
+<li>Dispatching to your plugin store</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="the-plugin-structure"></a><a href="#the-plugin-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Plugin structure</h2>
+<p>While we let you to come up with your own structure, this is currently the preferred way of structuring your plugin folder.</p>
+<blockquote>
+<p>This is also the structure we'll be following in this tutorial</p>
+</blockquote>
+<pre><code class="hljs css language-css">/actions
+/utils
+index.js
+config.js
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="our-plugin"></a><a href="#our-plugin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Our plugin</h2>
+<p>It's important to lay out first what your plugin is for, what can and what cannot it do. In this tutorial we'll build a <strong>math chatbot plugin</strong>!</p>
+<p>Imagine you're in game, you're too lazy to get your calculator up, and you just want to message a friend so it can do your math for you. Sure, your friends can do <code>1+1</code>, but how about <code>652*6521/321+3265-1321</code> or maybe <code>cos(3)</code>? <strong>quick mafs</strong></p>
+<p>So we want to make a plugin and implement it in a bot to do the following stuff:</p>
+<ul>
+<li>Receives and process messages from friends</li>
+<li>Optional <code>trusted</code> list that can be configured</li>
+<li>Detect the command <code>!math</code></li>
+<li>If the stuff after the <code>!math</code> can be calulcated, it calculates it and sends it back</li>
+<li>Dispatch the number of operations solved to the redux store</li>
+<li>Log errors and operations to the terminal</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="making-the-structure"></a><a href="#making-the-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Making the structure</h2>
+<p>After installing difys, let's go ahead and make a folder inside the <code>~/plugins</code> directory.</p>
+<pre><code class="hljs css language-bash">$ mkdir ChatMath
+$ <span class="hljs-built_in">cd</span> ChatMath
+$ mkdir actions
+$ mkdir utils
+$ code .
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="indexjs"></a><a href="#indexjs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>index.js</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="the-core-of-the-plugin"></a><a href="#the-core-of-the-plugin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Core of the Plugin</h3>
+<p>First, we make our <code>info</code> const:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> config <span class="hljs-keyword">from</span> <span class="hljs-string">"./config"</span>;
+
+<span class="hljs-keyword">const</span> info = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"ChatMath"</span>,
+    <span class="hljs-attr">description</span>: <span class="hljs-string">"Because my friends can't do quik mafs"</span>,
+    <span class="hljs-attr">author</span>: <span class="hljs-string">"Difys"</span>,
+    <span class="hljs-attr">version</span>: <span class="hljs-string">"0.0.1"</span>,
+    config
+};
+</code></pre>
+<blockquote>
+<p>The <code>config</code> file is currently empty but we'll comeback to it later.</p>
+</blockquote>
+<p>Now, the core of our plugin!</p>
+<pre><code class="hljs css language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChatMath</span> </span>{
+    <span class="hljs-keyword">constructor</span>() {
+        <span class="hljs-keyword">this</span>.config = info.config;
+        <span class="hljs-keyword">this</span>.listeners = [];
+        <span class="hljs-keyword">this</span>.exports = [];
+        <span class="hljs-keyword">this</span>.connections = {};
+    }
+
+    mount(connections) {}
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utility-functions"></a><a href="#utility-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utility functions</h3>
+<p>Let's switch the focus a lil bit to <code>~/utils/</code> let's make an <code>index.js</code> there and add our first utility function which is a custom logger.</p>
+<blockquote>
+<p>While it's completely possible to make your custom logger inside the Plugin class, we hugely recommend you keep stuff modular and keep the utility <a href="https://www.sitepoint.com/functional-programming-pure-functions/">pure functions</a> outside your class.</p>
+</blockquote>
+<p><code>/utils/index.js</code></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> { logger } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../../Libs"</span>;
+
+<span class="hljs-comment">/**
+ * The ChatBot plugin logger
+ * @param {String} message
+ */</span>
+<span class="hljs-keyword">const</span> myLogger = {
+    <span class="hljs-attr">debug</span>: <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> logger.debug(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${message}</span>`</span>),
+    <span class="hljs-attr">info</span>: <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> logger.info(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${message}</span>`</span>),
+    <span class="hljs-attr">warn</span>: <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> logger.warn(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${message}</span>`</span>),
+    <span class="hljs-attr">error</span>: <span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> logger.error(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${error}</span>`</span>))
+};
+
+<span class="hljs-comment">/**
+ * Evaluates a math expression using an api, because using eval() is bad!
+ * @param {String} mathExp
+ */</span>
+<span class="hljs-keyword">const</span> evaluateMath = <span class="hljs-keyword">async</span> mathExp =&gt; {
+    <span class="hljs-comment">// We encode our math expression</span>
+    <span class="hljs-keyword">const</span> encodedMathExp = <span class="hljs-built_in">encodeURIComponent</span>(mathExp);
+    <span class="hljs-comment">// concat it with the api string</span>
+    <span class="hljs-keyword">const</span> url = <span class="hljs-string">`http://api.mathjs.org/v4/?expr=<span class="hljs-subst">${encodedMathExp}</span>`</span>;
+    <span class="hljs-comment">// we make our request using got and await for it</span>
+    <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> got(url);
+    <span class="hljs-comment">// we return the response</span>
+    <span class="hljs-keyword">return</span> response.body;
+};
+
+<span class="hljs-keyword">export</span> { myLogger, evaluateMath };
+</code></pre>
+<p>We're going to use the difys <code>logger</code> library and build our logger on it, this way we can use <code>myLogger.level()</code> and it will give us back a shiny log with our plugin name on it ;)</p>
+<blockquote>
+<p>This can be done in several other ways, maybe faster, maybe prettier, but to keep it plain and simple, we're just gonna go with this for now.</p>
+</blockquote>
+<p>We finally export our utility functions, this way we can access to them from the core by using</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> { myLogger } <span class="hljs-keyword">from</span> <span class="hljs-string">"./utils"</span>;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="mounting"></a><a href="#mounting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mounting</h3>
+<p>Before we can use the pluginAPI, we need to mount our plugin. Here we can inform the user that our plugin is up and running and hook accounts to our plugin, this is a good place to implement some kind of logic to only mount accounts whom the user defined in our plugin config. So let's go and visit <code>config.js</code>.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> config = {
+    <span class="hljs-attr">enabled</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">accounts</span>: [<span class="hljs-string">"myBotUsername"</span>]
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> config
+</code></pre>
+<p>Again, we leave to you the freedom to do your own config structure. But to keep things plain and simple we're gonna give the user the ability to add to that array the usernames of bots he want to hook the plugin with, we're also gonna give the ability to the user to enable/disable plugin.</p>
+<blockquote>
+<p>Following <strong>v0.0.3</strong> you need to return either <code>false</code> or <code>true</code> in the <code>mount()</code> method in order for difys to know wether you want to disable/enable your plugin.</p>
+</blockquote>
+<p>Now back to our mount method at <code>index.js</code></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChatMath</span> </span>{
+    <span class="hljs-keyword">constructor</span>() {
+        <span class="hljs-comment">// the constructor stuff</span>
+    }
+
+    mount(connections) {
+        <span class="hljs-keyword">const</span> accounts = <span class="hljs-keyword">this</span>.config.accounts;
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.enabled) {
+            myLogger.info(<span class="hljs-string">"Initiating..."</span>);
+            <span class="hljs-comment">// we loop through each account in the config accounts array</span>
+            accounts.forEach(<span class="hljs-function"><span class="hljs-params">account</span> =&gt;</span> {
+                <span class="hljs-comment">// we check if the username exists in the difys core connections</span>
+                <span class="hljs-keyword">if</span> (connections.hasOwnProperty(account)) {
+                    <span class="hljs-comment">// we push the account and its socket into this.connections</span>
+                    <span class="hljs-comment">// so that this.connections[account] returns the account socket</span>
+                    <span class="hljs-keyword">this</span>.connections[account] = connections[account];
+
+                    <span class="hljs-comment">// we let the user know that we hooked the account</span>
+                    myLogger.info(<span class="hljs-string">`<span class="hljs-subst">${account}</span> hooked successfully!`</span>);
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-comment">// We didn't find any username in the difys core accounts that exists in our config</span>
+                    <span class="hljs-comment">// We let the user know, maybe he mispelled the account username?</span>
+                    myLogger.warn(
+                        <span class="hljs-string">`<span class="hljs-subst">${account}</span> doesn't exist in the difys core, are you sure it's correct username?`</span>
+                    );
+                }
+            });
+
+            <span class="hljs-comment">// we inform the user that we finished mounting the plugin</span>
+            myLogger.info(<span class="hljs-string">"Finished mounting!"</span>);
+
+            <span class="hljs-comment">// we return true to the difys core, letting it know that the mounting process was successful</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> {
+            myLogger.warn(
+                <span class="hljs-string">"Plugin disabled, if you wish to reenable it, check your config.js"</span>
+            );
+            <span class="hljs-comment">// we return true to the difys core, letting it know that the mounting process was not successful</span>
+            <span class="hljs-comment">// ergo disabling the plugin...</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+    }
+}
+</code></pre>
+<p>Now that we mounted the plugin, let's go start interacting with the touch server!</p>
+<h3><a class="anchor" aria-hidden="true" id="adding-a-listener"></a><a href="#adding-a-listener" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding a listener</h3>
+<p>We covered this back in the basic plugins tutorial, but let's go and revisit it again to make you more familiar on how listeners actually work.</p>
+<p>A listener is just a method to your plugin class that has the same name as the one in the touch socket protocol. In this tutorial we are interested in the <code>ChatServerMessage</code> let's go ahead and make our method!</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">async</span> ChatServerMessage(payload) {
+    <span class="hljs-keyword">const</span> { socket, data } = payload;
+    <span class="hljs-keyword">const</span> { channel, content } = data;
+
+    <span class="hljs-comment">// We check if it's a private message or not</span>
+    <span class="hljs-comment">// 9 is the id for private messages</span>
+    <span class="hljs-keyword">if</span> (channel === <span class="hljs-number">9</span>) {
+        <span class="hljs-comment">// Now we check if the message starts with "!math"</span>
+        <span class="hljs-comment">// With do that with Regular Expressions</span>
+        <span class="hljs-keyword">const</span> isCommand = <span class="hljs-regexp">/^(!math)/g</span>;
+        <span class="hljs-keyword">if</span> (isCommand.test(content)) {
+            <span class="hljs-comment">// It is! now let's grab our mathematical operation from the message</span>
+            <span class="hljs-keyword">const</span> regex = <span class="hljs-regexp">/([A-Za-z0-9-+\-*/()[\]]+)$/g</span>;
+            <span class="hljs-keyword">const</span> mathExp = content.match(regex);
+            <span class="hljs-comment">// We send this to our evaluator utility function</span>
+            <span class="hljs-keyword">const</span> response = evaluateMath(mathExp);
+
+            <span class="hljs-comment">// We grab the senderName from the data payload</span>
+            <span class="hljs-keyword">const</span> senderName = data.senderName;
+
+            <span class="hljs-comment">// We log it to debug</span>
+            myLogger.debug(<span class="hljs-string">`Received a math expression from <span class="hljs-subst">${senderName}</span>`</span>);
+
+            <span class="hljs-comment">// We send the response to him</span>
+            <span class="hljs-comment">// always wrap anything that has await inside "try"</span>
+            <span class="hljs-comment">// this way if there is an error we can send it</span>
+            <span class="hljs-keyword">try</span> {
+                socket.sendMessage(<span class="hljs-string">"ChatClientPrivateMessage"</span>, {
+                    <span class="hljs-comment">// our evaluateMath is an async function it returns a promise</span>
+                    <span class="hljs-comment">// let's await that promise</span>
+                    content: <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">await</span> response}</span> quick mafs`</span>,
+                    <span class="hljs-attr">receiver</span>: senderName
+                });
+            } <span class="hljs-keyword">catch</span> (error) {
+                <span class="hljs-comment">// we log the error</span>
+                myLogger.error(error);
+                <span class="hljs-comment">// we also send it to the senderName inside the game, why not :)</span>
+                socket.sendMessage(<span class="hljs-string">"ChatClientPrivateMessage"</span>, {
+                    <span class="hljs-attr">content</span>: <span class="hljs-string">"An error has occured!"</span>,
+                    <span class="hljs-attr">receiver</span>: senderName
+                });
+            }
+        }
+    }
+}
+</code></pre>
+<p>And we're done with the core!</p>
+<blockquote>
+<p>If you're having a hard time understanding regex, don't worry you're not alone, why don't you go ahead and learn it, it's a very powerful tool and will help you vastly. <a href="https://regexone.com/">Learn it here</a>!</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="the-redux-store"></a><a href="#the-redux-store" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Redux store</h3>
+<p>Sometimes, we want to store our plugin data somewhere, make it accessible for other plugins AND expose it to the difys server. To do so, difys uses a generalized data store, it's an advanced system that let all modules and plugins communicate with eachothers in a fast, easy way! In this part of the tutorial we're gonna learn how to interact with that store, get data from it and push data to it.</p>
+<p>If you want to dive deep into how redux works, check their website <a href="https://redux.js.org/">https://redux.js.org/</a></p>
+<p>For our use case, we want to store how many times our bot was successful into solving mathematical operations, so each time our bot solves an operation, we increment a counter.</p>
+<blockquote>
+<p>While it is doable in the plugin constructor, keep in mind that the whole idea of redux is to expose your data to other components of the app, you can see the constructor as local data, while redux as inter data.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="the-state"></a><a href="#the-state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The State</h4>
+<p>The state is just an object with your plugin name on it, each account has its own plugins state, so <code>myFirstAccount.plugins.ChatMath</code> <strong>is not</strong> <code>mySecondAccount.plugins.ChatMath</code>.</p>
+<p>The state is normally <strong>immutable</strong> but we're using <a href="https://github.com/immerjs/immer">ImmerJs</a> which let us workaround and mutate it directly via <code>actions</code>.</p>
+<p>The plugins state looks like this:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> plugins = {
+    <span class="hljs-attr">ChatMath</span>: {},
+    <span class="hljs-attr">Inventory</span>: {},
+    <span class="hljs-attr">Map</span>: {}
+    <span class="hljs-comment">// Other plugins...</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="actions"></a><a href="#actions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Actions</h4>
+<p>Redux actions are just functions that change the <code>state</code>, we them dispatch via the slice reducers and the redux api handles state updates.</p>
+<blockquote>
+<p>If you want to read more on advanced plugin redux structure check the <a href="/plugins/redux-plugins">Redux &amp; Plugins</a> page</p>
+</blockquote>
+<p>Before we can make our incrementing action, first we need to make an initiation action</p>
+<p><code>/actions/account/chatmath.js</code></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> initChatMath = <span class="hljs-function">(<span class="hljs-params">state, action</span>) =&gt;</span> {
+    <span class="hljs-comment">// We grab the username from the payload</span>
+    <span class="hljs-keyword">const</span> username = action.payload.username;
+    <span class="hljs-comment">// We initiate a counter</span>
+    state[username].plugins.ChatMath = {
+        <span class="hljs-attr">solves</span>: <span class="hljs-number">0</span>
+    };
+};
+</code></pre>
+<p>We always take the previous state and the action as an argument, the payload could be everything you want but it will generally look like this most of the time</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> payload = {
+    <span class="hljs-attr">username</span>: <span class="hljs-string">"someUsername"</span>
+    <span class="hljs-comment">// extra stuff if necessary</span>
+}
+</code></pre>
+<p>Let's make our incrementing action!</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> incrementSolves = <span class="hljs-function">(<span class="hljs-params">state, action</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> username = action.payload.username;
+    <span class="hljs-comment">// We increment the counter</span>
+    state[username].plugins.ChatMath.solved++;
+};
+</code></pre>
+<p>With immer, we don't have to worry about immutibility, we can mutate the state directly with <code>++</code></p>
+<p>We export our actions, and we're ready to go!</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">export</span> { initChatMath, incrementSolves }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="finishing-our-plugin"></a><a href="#finishing-our-plugin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finishing our plugin</h2>
+<p>With the new redux part we learned, we can now dispatch <code>initChatMath()</code> in the mounting process, then increment our solves with <code>incrementSolves()</code> each time the bot makes a solve. Let's do that!</p>
+<p><code>index.js</code> - root</p>
+<p>First let's import the <code>accounts</code> slice and the redux store in order to use and dispatch our actions.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">"../../Modules/Store"</span>;
+<span class="hljs-keyword">import</span> { accounts } <span class="hljs-keyword">from</span> <span class="hljs-string">"../Store/reducers/slices"</span>;
+</code></pre>
+<p><code>mount()</code></p>
+<pre><code class="hljs css language-js">mount(connections) {
+    <span class="hljs-comment">// all the stuff we already did</span>
+    <span class="hljs-keyword">this</span>.connections[username] = connections[username];
+
+    <span class="hljs-comment">// we dispatch with the username in the payload</span>
+    store.dispatch(accounts.actions.initChatMath({ username }));
+}
+</code></pre>
+<p><code>ChatServerMessage()</code></p>
+<pre><code class="hljs css language-js">ChatServerMessage(payload) {
+    <span class="hljs-comment">// we dispatch with the username in the payload</span>
+    store.dispatch(
+        accounts.actions.increment({
+            <span class="hljs-comment">// We can grab the username from inside payload.socket.account.username</span>
+            username: socket.account.username
+        })
+    );
+}
+</code></pre>
+<p>Now the number of solves is available everywhere! Even in the difys api.</p>
+<h2><a class="anchor" aria-hidden="true" id="wrapping-up"></a><a href="#wrapping-up" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wrapping up</h2>
+<p>As you can see, with the difys plugin api, the possiblities are endless... You can make literally whatever you want once you master it! We hope it wasn't too hard and if you have more questions don't hesitate to join our discord server. <strong>Make plugins!</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="final-chatmath-indexjs"></a><a href="#final-chatmath-indexjs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Final <code>~/ChatMath/index.js</code></h3>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> config <span class="hljs-keyword">from</span> <span class="hljs-string">"./config"</span>;
+<span class="hljs-keyword">import</span> { myLogger, evaluateMath } <span class="hljs-keyword">from</span> <span class="hljs-string">"./utils/"</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">"../../Modules/Store"</span>;
+<span class="hljs-keyword">import</span> { accounts } <span class="hljs-keyword">from</span> <span class="hljs-string">"../Store/reducers/slices"</span>;
+
+<span class="hljs-keyword">const</span> info = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"ChatMath"</span>,
+    <span class="hljs-attr">description</span>: <span class="hljs-string">"Because my friends can't do quik mafs"</span>,
+    <span class="hljs-attr">author</span>: <span class="hljs-string">"Difys"</span>,
+    <span class="hljs-attr">version</span>: <span class="hljs-string">"0.0.1"</span>,
+    config
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChatMath</span> </span>{
+    <span class="hljs-keyword">constructor</span>() {
+        <span class="hljs-keyword">this</span>.config = info.config;
+        <span class="hljs-keyword">this</span>.listeners = [<span class="hljs-keyword">this</span>.ChatServerMessage];
+        <span class="hljs-keyword">this</span>.exports = [];
+        <span class="hljs-keyword">this</span>.connections = {};
+    }
+
+    mount(connections) {
+        <span class="hljs-keyword">const</span> allAccounts = <span class="hljs-keyword">this</span>.config.accounts;
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.enabled) {
+            myLogger.info(<span class="hljs-string">"Initiating..."</span>);
+            <span class="hljs-comment">// we loop through each account in the config accounts array</span>
+            allAccounts.forEach(<span class="hljs-function"><span class="hljs-params">username</span> =&gt;</span> {
+                <span class="hljs-comment">// we check if the username exists in the difys core connections</span>
+                <span class="hljs-keyword">if</span> (connections.hasOwnProperty(username)) {
+                    <span class="hljs-comment">// we push the account and its socket into this.connections</span>
+                    <span class="hljs-comment">// so that this.connections[account] returns the account socket</span>
+                    <span class="hljs-keyword">this</span>.connections[username] = connections[username];
+
+                    store.dispatch(accounts.actions.initChatMath({ username }));
+
+                    <span class="hljs-comment">// we let the user know that we hooked the account</span>
+                    myLogger.info(<span class="hljs-string">`<span class="hljs-subst">${username}</span> hooked successfully!`</span>);
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-comment">// We didn't find any username in the difys core accounts that exists in our config</span>
+                    <span class="hljs-comment">// We let the user know, maybe he mispelled the account username?</span>
+                    myLogger.warn(
+                        <span class="hljs-string">`<span class="hljs-subst">${username}</span> doesn't exist in the difys core, are you sure it's correct username?`</span>
+                    );
+                }
+            });
+
+            <span class="hljs-comment">// we inform the user that we finished mounting the plugin</span>
+            myLogger.info(<span class="hljs-string">"Finished mounting!"</span>);
+
+            <span class="hljs-comment">// we return true to the difys core, letting it know that the mounting process was successful</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> {
+            myLogger.warn(
+                <span class="hljs-string">"Plugin disabled, if you wish to reenable it, check your config.js"</span>
+            );
+            <span class="hljs-comment">// we return true to the difys core, letting it know that the mounting process was not successful</span>
+            <span class="hljs-comment">// ergo disabling the plugin...</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+    }
+
+    <span class="hljs-keyword">async</span> ChatServerMessage(payload) {
+        <span class="hljs-keyword">const</span> { socket, data } = payload;
+        <span class="hljs-keyword">const</span> { channel, content } = data;
+
+        <span class="hljs-comment">// We check if it's a private message or not</span>
+        <span class="hljs-comment">// 9 is the id for private messages</span>
+        <span class="hljs-keyword">if</span> (channel === <span class="hljs-number">9</span>) {
+            <span class="hljs-comment">// Now we check if the message starts with "!math"</span>
+            <span class="hljs-comment">// With do that with Regular Expressions</span>
+            <span class="hljs-keyword">const</span> isCommand = <span class="hljs-regexp">/^(!math)/g</span>;
+            <span class="hljs-keyword">if</span> (isCommand.test(content)) {
+                <span class="hljs-comment">// It is! now let's grab our mathematical operation from the message</span>
+                <span class="hljs-keyword">const</span> regex = <span class="hljs-regexp">/([A-Za-z0-9-+\-*/()[\]]+)$/g</span>;
+                <span class="hljs-keyword">const</span> mathExp = content.match(regex);
+                <span class="hljs-comment">// We send this to our evaluator utility function</span>
+                <span class="hljs-keyword">const</span> response = evaluateMath(mathExp);
+
+                <span class="hljs-comment">// We grab the senderName from the data payload</span>
+                <span class="hljs-keyword">const</span> senderName = data.senderName;
+
+                <span class="hljs-comment">// We log it to debug</span>
+                myLogger.debug(<span class="hljs-string">`Received a math expression from <span class="hljs-subst">${senderName}</span>`</span>);
+
+                <span class="hljs-comment">// We send the response to him</span>
+                <span class="hljs-comment">// always wrap anything that has await inside "try"</span>
+                <span class="hljs-comment">// this way if there is an error we can send it</span>
+                <span class="hljs-keyword">try</span> {
+                    socket.sendMessage(<span class="hljs-string">"ChatClientPrivateMessage"</span>, {
+                        <span class="hljs-comment">// our evaluateMath is an async function it returns a promise</span>
+                        <span class="hljs-comment">// let's await that promise</span>
+                        content: <span class="hljs-keyword">await</span> response,
+                        <span class="hljs-attr">receiver</span>: senderName
+                    });
+
+                    <span class="hljs-comment">// dispatch an incrementation to the redux store!</span>
+                    store.dispatch(
+                        accounts.actions.incrementSolves({
+                            <span class="hljs-attr">username</span>: socket.account.username
+                        })
+                    );
+                } <span class="hljs-keyword">catch</span> (error) {
+                    <span class="hljs-comment">// we log the error</span>
+                    myLogger.error(error);
+                    <span class="hljs-comment">// we also send it to the senderName inside the game, why not :)</span>
+                    socket.sendMessage(<span class="hljs-string">"ChatClientPrivateMessage"</span>, {
+                        <span class="hljs-attr">content</span>: <span class="hljs-string">"An error has occured!"</span>,
+                        <span class="hljs-attr">receiver</span>: senderName
+                    });
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="final-chatmath-utils"></a><a href="#final-chatmath-utils" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Final <code>~/ChatMath/utils</code></h3>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> { logger } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../../Libs"</span>;
+<span class="hljs-keyword">import</span> got <span class="hljs-keyword">from</span> <span class="hljs-string">"got"</span>;
+
+<span class="hljs-comment">/**
+ * The ChatBot plugin logger
+ * @param {String} message
+ */</span>
+<span class="hljs-keyword">const</span> myLogger = {
+    <span class="hljs-attr">debug</span>: <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> logger.debug(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${message}</span>`</span>),
+    <span class="hljs-attr">info</span>: <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> logger.info(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${message}</span>`</span>),
+    <span class="hljs-attr">warn</span>: <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> logger.warn(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${message}</span>`</span>),
+    <span class="hljs-attr">error</span>: <span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> logger.error(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`[ChatMath] <span class="hljs-subst">${error}</span>`</span>))
+};
+
+<span class="hljs-comment">/**
+ * Evaluates a math expression using an api, because using eval() is bad!
+ * @param {String} mathExp
+ */</span>
+<span class="hljs-keyword">const</span> evaluateMath = <span class="hljs-keyword">async</span> mathExp =&gt; {
+    <span class="hljs-keyword">const</span> encodedMathExp = <span class="hljs-built_in">encodeURIComponent</span>(mathExp);
+    <span class="hljs-keyword">const</span> url = <span class="hljs-string">`http://api.mathjs.org/v4/?expr=<span class="hljs-subst">${encodedMathExp}</span>`</span>;
+    <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> got(url);
+    <span class="hljs-keyword">return</span> response.body;
+};
+
+<span class="hljs-keyword">export</span> { myLogger, evaluateMath };
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="final-chatmath-actions-chatmathjs"></a><a href="#final-chatmath-actions-chatmathjs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Final <code>~/ChatMath/actions/chatmath.js</code></h3>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> initChatMath = <span class="hljs-function">(<span class="hljs-params">state, action</span>) =&gt;</span> {
+    <span class="hljs-comment">// We grab the username from the payload</span>
+    <span class="hljs-keyword">const</span> username = action.payload.username;
+    <span class="hljs-comment">// We initiate a counter</span>
+    state[username].plugins.ChatMath = {
+        <span class="hljs-attr">solves</span>: <span class="hljs-number">0</span>
+    };
+};
+
+<span class="hljs-keyword">const</span> incrementSolves = <span class="hljs-function">(<span class="hljs-params">state, action</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> username = action.payload.username;
+    <span class="hljs-comment">// We increment the counter</span>
+    state[username].plugins.ChatMath.solved++;
+};
+
+<span class="hljs-keyword">export</span> { initChatMath, incrementSolves };
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="screenshots"></a><a href="#screenshots" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Screenshots</h2>
+<p></br>
+<center><img src="../../img/screenshots/chatmath1.png" alt="Chat Math Screenshot" /></br></p>
+<p>The bot doing quick mafs</center></p>
+<p></br>
+<center><img src="../../img/screenshots/chatmath2.png" alt="Chat Math Screenshot" /></br></p>
+<p>PostMan request to the difys server, ergo the redux store</center></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/introduction/scripts"><span class="arrow-prev">← </span><span>Scripts</span></a><a class="docs-next button" href="/plugins/redux-plugins"><span>Redux &amp; Plugins</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#the-plugin-structure">The Plugin structure</a></li><li><a href="#our-plugin">Our plugin</a></li><li><a href="#making-the-structure">Making the structure</a></li><li><a href="#indexjs"><code>index.js</code></a><ul class="toc-headings"><li><a href="#the-core-of-the-plugin">The Core of the Plugin</a></li><li><a href="#utility-functions">Utility functions</a></li><li><a href="#mounting">Mounting</a></li><li><a href="#adding-a-listener">Adding a listener</a></li><li><a href="#the-redux-store">The Redux store</a></li></ul></li><li><a href="#finishing-our-plugin">Finishing our plugin</a></li><li><a href="#wrapping-up">Wrapping up</a><ul class="toc-headings"><li><a href="#final-chatmath-indexjs">Final <code>~/ChatMath/index.js</code></a></li><li><a href="#final-chatmath-utils">Final <code>~/ChatMath/utils</code></a></li><li><a href="#final-chatmath-actions-chatmathjs">Final <code>~/ChatMath/actions/chatmath.js</code></a></li></ul></li><li><a href="#screenshots">Screenshots</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/difys.svg" alt="difys docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/introduction/quick-start">Quick start</a><a href="/introduction/core">The Core</a><a href="/plugins/plugins-api">Plugins</a><a href="/scripting/scripting-api">Scripting</a></div><div><h5>Community</h5><a href="https://discord.gg/vgvgN2n" target="_blank" rel="noreferrer noopener">Discord</a><a href="http://cadernis.fr/" target="_blank" rel="noreferrer noopener">Cadernis</a></div><div><h5>More</h5><a href="https://github.com/difysjs/difys/">GitHub</a><a class="github-button" href="https://github.com/difysjs/difys" data-icon="octicon-star" data-count-href="/difysjs/difys/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Difys team</section></footer></div></body></html>
